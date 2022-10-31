@@ -11,12 +11,18 @@ body{
     min-height: 100vh;
     background: #edf1f4;
 }
+body.active{
+    background: #262626;
+}
 .calculator{
     position: relative;
     width: 340px;
     padding:20px;
     border-radius: 20px;
     box-shadow: 15px 15px 20px rgba(0,0,0,0.1),-15px -15px 20px #fffb;
+}
+.calculator.active{
+    box-shadow: 15px 15px 20px rgba(0,0,0,0.1),-15px -15px 20px #1a1a1abb;
 }
 .calculator .buttons{
     position: relative;
@@ -54,9 +60,14 @@ body{
     font-size: 1.2em;
     color: #666;
     border: 2px solid #edf1f4;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
-    -5px -5px 10px #fff;
+    /* box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+    -5px -5px 10px #fff; */
     border-radius: 10px;
+}
+span.active{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+    -5px -5px 20px #fff;
+    border: 2px solid #2f2f2f;
 }
 .calculator .buttons span:active{
     box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
@@ -86,4 +97,18 @@ body{
     box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
     -5px -5px 10px #fff,
     inset 5px 5px 10px rgba(0,0,0,0.1);
+}
+.bg-change{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    background-image: url(moon-solid-24\ \(1\).png);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+}
+.bg-change.active{
+    background-image: url(sun-solid-24.png);
 }
